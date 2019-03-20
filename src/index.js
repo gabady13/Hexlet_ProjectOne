@@ -1,4 +1,4 @@
 import 'source-map-support/register';
-import half from './half';
+import askName from './askName';
 
-export default half;
+export default askName;
