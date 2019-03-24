@@ -3,6 +3,7 @@
 import Welcome from './Welcome';
 import askName from '..';
 import { random } from 'lodash';
+
 const readlineSync = require('readline-sync');
 
 
