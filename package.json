@@ -6,7 +6,7 @@
   "bin": {
     "hexlet": "dist/bin/hexlet.js",
     "brain-games": "dist/bin/brain-games.js",
-    "brain-event": "dist/bin/brain-event.js"
+    "brain-even": "dist/bin/brain-even.js"
   },
   "engines": {
     "node": ">=8"
