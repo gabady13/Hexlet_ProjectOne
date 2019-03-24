@@ -6,8 +6,8 @@ import { random } from 'lodash';
 const readlineSync = require('readline-sync');
 
 
-const roundCount = 4;
-const roundCo = 1;
+const roundCount = 3;
+const roundCo = 0;
 
 console.log(Welcome());
 console.log('Answer "yes" if number even otherwise answer "no".');
