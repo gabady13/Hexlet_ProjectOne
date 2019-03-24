@@ -7,7 +7,7 @@ run:
 start:
 	npm run babel-node -- src/bin/brain-games.js
 
-run:
+runbe:
 	npm run babel-node -- src/bin/brain-even.js
 
 install-deps:

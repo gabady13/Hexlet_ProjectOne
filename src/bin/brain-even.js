@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import Welcome from './Welcome';
 import askName from '..';
-import { random } from 'lodash';
+import Welcome from './Welcome';
+import { random } from 'lodash/fp';
 
 const readlineSync = require('readline-sync');
 
@@ -25,13 +25,13 @@ const roundOfGames = (roundCou, countRounds, LuserName) => {
     if (rand % 2 === 0) {
       if (ansver === 'yes') {
         console.log('Correct!');
-        roundOfGames(roundCou + 1, countRounds, LuserName);     
+        roundOfGames(roundCou + 1, countRounds, LuserName);
       } else {
         console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${LuserName}!`);
       }
     } else if (ansver === 'no') {
       console.log('Correct!');
-      roundOfGames(roundCou + 1, countRounds, LuserName);     
+      roundOfGames(roundCou + 1, countRounds, LuserName);
     } else {
       console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${LuserName}!`);
     }
