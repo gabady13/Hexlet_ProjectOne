@@ -6,7 +6,7 @@ import { random } from 'lodash';
 const readlineSync = require('readline-sync');
 
 
-const roundCount = 3;
+const roundCount = 4;
 const roundCo = 1;
 
 console.log(Welcome());
