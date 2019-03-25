@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 
-import askName from '..';
-import Welcome from '../Welcome';
 import { random } from 'lodash/fp';
+import askName from '../..';
+import Welcome from '../../Welcome';
 
 const readlineSync = require('readline-sync');
 
@@ -10,25 +10,26 @@ const roundCount = 3;
 const roundCo = 0;
 
 console.log(Welcome());
-console.log('Answer "yes" if number even otherwise answer "no".');
+console.log('What is the result of the expression?');
 const userName = askName();
 console.log(`Hello, ${userName}!`);
 
-const failAnsver = (ansver, LuserName) => {
-  if (ansver === 'yes') {
-    console.log(`'yes' is wrong answer ;(. Correct answer was 'no'.\nLet's try again, ${LuserName}!`);
-  } else {
-    console.log(`'no' is wrong answer ;(. Correct answer was 'yes'.\nLet's try again, ${LuserName}!`);
-  }
+const failAnsver = (ansver, numer, LuserName) => {
+  console.log(`${ansver} is wrong answer ;(. Correct answer was ${numer}.\nLet's try again, ${LuserName}!`);
 };
 
 const askQuastion = () => {
-  const rand = random(1, 100);
+  const one = random(1, 100);
+  const two = random(1, 100);
+  const znak = random(0, 2);
+  const arr = ['+', '-', '*'];
+  const rand = (`${one}${arr[znak]}${two}`);
   console.log(`Question:${rand}`);
   const ansver = readlineSync.question('Your answer:');
   const obj = {};
-  obj.numer = rand;
-  obj.ansver = ansver;
+  // eslint-disable-next-line no-eval
+  obj.numer = eval(rand);
+  obj.ansver = Number(ansver);
   return obj;
 };
 
@@ -37,11 +38,11 @@ const roundOfGames = (roundCou, countRounds, LuserName) => {
     console.log(`Congratulations, ${LuserName}!`);
   } else {
     const Quastion = askQuastion();
-    if ((Quastion.numer % 2 === 0 && Quastion.ansver === 'yes') || (Quastion.numer % 2 !== 0 && Quastion.ansver === 'no')) {
+    if (Quastion.numer === Quastion.ansver) {
       console.log('Correct');
       roundOfGames(roundCou + 1, countRounds, LuserName);
     } else {
-      failAnsver(Quastion.ansver, LuserName);
+      failAnsver(Quastion.ansver, Quastion.numer, LuserName);
     }
   }
 };
