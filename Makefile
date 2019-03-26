@@ -13,6 +13,9 @@ start_even:
 start_calc:
 	npm run babel-node -- src/bin/games/brain-calc.js
 
+start_gcd:
+	npm run babel-node -- src/bin/games/brain-gcd.js
+
 install-deps:
 	npm install
 
