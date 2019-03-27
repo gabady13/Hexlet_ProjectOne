@@ -1,15 +1,15 @@
 {
   "name": "nodejs-packagetestgabady",
-  "version": "0.0.30",
+  "version": "0.1.0",
   "description": "",
   "main": "dist/index.js",
   "bin": {
     "hexlet": "dist/bin/hexlet.js",
-    "brain-games": "dist/bin/games/brain-games.js",
-    "brain-even": "dist/bin/games/brain-even.js",
-    "brain-calc": "dist/bin/games/brain-calc.js",
-    "brain-gcd": "dist/bin/games/brain-gcd.js",
-    "brain-balance": "dist/bin/games/brain-balance.js"
+    "brain-games": "dist/bin/brain-start/brain-games.js",
+    "brain-even": "dist/bin/brain-start/brain-even.js",
+    "brain-calc": "dist/bin/brain-start/brain-calc.js",
+    "brain-gcd": "dist/bin/brain-start/brain-gcd.js",
+    "brain-balance": "dist/bin/brain-start/brain-balance.js"
   },
   "engines": {
     "node": ">=8"

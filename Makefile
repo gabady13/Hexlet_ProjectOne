@@ -5,19 +5,19 @@ run:
 	npx babel-node 'src/bin/hexlet.js' 10
 
 start:
-	npm run babel-node -- src/bin/games/brain-games.js
+	npm run babel-node -- src/bin/brain-start/brain-games.js
 
 start_even:
-	npm run babel-node -- src/bin/games/brain-even.js
+	npm run babel-node -- src/bin/brain-start/brain-even.js
 
 start_calc:
-	npm run babel-node -- src/bin/games/brain-calc.js
+	npm run babel-node -- src/bin/brain-start/brain-calc.js
 
 start_gcd:
-	npm run babel-node -- src/bin/games/brain-gcd.js
+	npm run babel-node -- src/bin/brain-start/brain-gcd.js
 
 start_balance:
-	npm run babel-node -- src/bin/games/brain-balance.js
+	npm run babel-node -- src/bin/brain-start/brain-balance.js
 
 install-deps:
 	npm install
