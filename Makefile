@@ -16,6 +16,9 @@ start_calc:
 start_gcd:
 	npm run babel-node -- src/bin/games/brain-gcd.js
 
+start_balance:
+	npm run babel-node -- src/bin/games/brain-balance.js
+
 install-deps:
 	npm install
 
