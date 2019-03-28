@@ -1,8 +1,6 @@
 import startGames from '../../startGames';
 import ranQuastion from '../randomQuastion';
 
-const readlineSync = require('readline-sync');
-
 const nameTask = 'Answer "yes" if number even otherwise answer "no"';
 const tryAnsver = (num) => {
   let otvet = 'no';
@@ -13,12 +11,8 @@ const tryAnsver = (num) => {
 };
 
 const ansverQuastion = () => {
-  const rand = ranQuastion('Question', 1000);
-  const ansver = readlineSync.question('Your answer:');
-  const obj = {};
-  obj.numer = tryAnsver(rand);
-  obj.ansver = ansver;
-  return obj;
+  const rand = ranQuastion('Question', 1000, tryAnsver);
+  return rand;
 };
 
 export default () => startGames(nameTask, ansverQuastion);

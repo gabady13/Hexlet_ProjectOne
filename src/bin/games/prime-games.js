@@ -1,9 +1,6 @@
 import startGames from '../../startGames';
 import ranQuastion from '../randomQuastion';
 
-
-const readlineSync = require('readline-sync');
-
 const nameTask = 'Answer "yes" if number prime otherwise answer "no"';
 function isPrime(num) {
   if (num < 2) return 'no';
@@ -14,12 +11,8 @@ function isPrime(num) {
 }
 
 const ansverQuastion = () => {
-  const num = ranQuastion('Is this number prime', 1000);
-  const ansver = readlineSync.question('Your answer:');
-  const obj = {};
-  obj.numer = isPrime(num);
-  obj.ansver = ansver;
-  return obj;
+  const num = ranQuastion('Is this number prime', 1000, isPrime);
+  return num;
 };
 
 export default () => startGames(nameTask, ansverQuastion);

@@ -1,7 +1,13 @@
 import { random } from 'lodash/fp';
 
-export default (trans, num) => {
+const readlineSync = require('readline-sync');
+
+export default (trans, num, numAnsver) => {
   const rand = random(1, num);
   console.log(`${trans}:${rand}`);
-  return rand;
+  const ansver = readlineSync.question('Your answer:');
+  const obj = {};
+  obj.numer = numAnsver(rand);
+  obj.ansver = ansver;
+  return obj;
 };
