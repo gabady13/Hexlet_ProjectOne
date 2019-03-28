@@ -19,6 +19,12 @@ start_gcd:
 start_balance:
 	npm run babel-node -- src/bin/brain-start/brain-balance.js
 
+start_progression:
+	npm run babel-node -- src/bin/brain-start/brain-progression.js
+
+start_prime:
+	npm run babel-node -- src/bin/brain-start/brain-prime.js
+
 install-deps:
 	npm install
 
