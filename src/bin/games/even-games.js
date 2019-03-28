@@ -1,5 +1,5 @@
-import { random } from 'lodash/fp';
 import startGames from '../../startGames';
+import ranQuastion from '../randomQuastion';
 
 const readlineSync = require('readline-sync');
 
@@ -13,8 +13,7 @@ const tryAnsver = (num) => {
 };
 
 const ansverQuastion = () => {
-  const rand = random(1, 100);
-  console.log(`Question:${rand}`);
+  const rand = ranQuastion('Question', 1000);
   const ansver = readlineSync.question('Your answer:');
   const obj = {};
   obj.numer = tryAnsver(rand);

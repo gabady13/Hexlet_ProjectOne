@@ -1,5 +1,5 @@
-import { random } from 'lodash/fp';
 import startGames from '../../startGames';
+import ranQuastion from '../randomQuastion';
 
 
 const readlineSync = require('readline-sync');
@@ -14,8 +14,7 @@ function isPrime(num) {
 }
 
 const ansverQuastion = () => {
-  const num = random(1, 1000);
-  console.log(`Is this number prime:${num}`);
+  const num = ranQuastion('Is this number prime', 1000);
   const ansver = readlineSync.question('Your answer:');
   const obj = {};
   obj.numer = isPrime(num);
